@@ -22,4 +22,13 @@ public class SubActivity extends AppCompatActivity {
         usernameText.setText(username);
         passwordText.setText(""+password);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent2= new Intent();
+        intent2.putExtra("result", "ok");
+        setResult(1234, intent2);
+        finish();
+
+    }
 }
